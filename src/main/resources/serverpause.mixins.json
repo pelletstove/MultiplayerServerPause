@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.ichun.mods.serverpause.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "MinecraftServerAccessor",
+    "MinecraftServerMixin",
+    "ServerGamePacketListenerImplAccessor",
+    "ServerPlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "serverpause",
+  "version": "${version}",
+  "name": "Multiplayer Server Pause",
+  "description": "Pauses the server when all connected players are paused (or when none are connected). Adds /pause for ops. Port of iChun's Multiplayer Server Pause to Fabric 26.2, without iChunUtil.",
+  "authors": ["iChun", "pelletstove (26.2 port)"],
+  "contact": {
+    "sources": "https://github.com/iChun/MultiplayerServerPause"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["me.ichun.mods.serverpause.ServerPause"],
+    "client": ["me.ichun.mods.serverpause.client.ServerPauseClient"]
+  },
+  "mixins": [
+    "serverpause.mixins.json",
+    { "config": "serverpause.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
